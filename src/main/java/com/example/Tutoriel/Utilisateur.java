@@ -1,15 +1,32 @@
 package com.example.Tutoriel;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Utilisateur {
 
+	  @Id
+	  @GeneratedValue
+	 private int idutilisateur;
+	  
 	 private String nom ;
 	 private String prenom;
 	 
 	 
 	 
 	 
-	public Utilisateur(String nom, String prenom) {
-		
+	
+	public int getIdutilisateur() {
+		return idutilisateur;
+	}
+	public void setIdutilisateur(int idutilisateur) {
+		this.idutilisateur = idutilisateur;
+	}
+	public Utilisateur(int idutilisateur, String nom, String prenom) {
+		super();
+		this.idutilisateur = idutilisateur;
 		this.nom = nom;
 		this.prenom = prenom;
 	}
